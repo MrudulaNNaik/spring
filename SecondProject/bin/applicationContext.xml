@@ -10,13 +10,30 @@
 <property name="name" value="mrudula"></property>  
 </bean> 
 
- <bean id = "employee" class = "constructor.injection.Employee">
  
+   <bean id ="a1" class ="constructor.injection.Address">
+     <constructor-arg value = "karwar"></constructor-arg>
+     <constructor-arg value = "Karnataka"></constructor-arg>
+     <constructor-arg value = "India"></constructor-arg>
+      </bean>
+      
+      
+  <bean id = "employee" class = "constructor.injection.Employee">    
  <constructor-arg value="43" type="int"></constructor-arg>
  <constructor-arg value = "naik"></constructor-arg>
       
+    
+     
+     
+     <constructor-arg>  
+       <ref bean="a1"/>  
+	</constructor-arg>  
+     
+    
+  </bean>   
+      
+      
  
  
- </bean>
-  
-</beans>  
+
+ </beans>  
